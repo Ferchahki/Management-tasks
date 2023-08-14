@@ -37,6 +37,8 @@ Copy the example env file and make the required configuration changes in the .en
 
     cp .env.example .env
 
+Mongo DB Package : https://github.com/jenssegers/laravel-mongodb#installation
+
 Generate a new application key
 
     php artisan key:generate
@@ -57,8 +59,8 @@ You can now access the server at http://localhost:8000
 
 **TL;DR command list**
 
-    git clone git@github.com:gothinkster/laravel-realworld-example-app.git
-    cd laravel-realworld-example-app
+    git clone git@github.com:Ferchahki/Management-tasks.git
+    cd folder Management bakend 
     composer install
     cp .env.example .env
     php artisan key:generate
@@ -85,35 +87,10 @@ Run the database seeder and you're done
 
     php artisan migrate:refresh
     
-## Docker
-
-To install with [Docker](https://www.docker.com), run following commands:
-
-```
-git clone git@github.com:gothinkster/laravel-realworld-example-app.git
-cd laravel-realworld-example-app
-cp .env.example.docker .env
-docker run -v $(pwd):/app composer install
-cd ./docker
-docker-compose up -d
-docker-compose exec php php artisan key:generate
-docker-compose exec php php artisan jwt:generate
-docker-compose exec php php artisan migrate
-docker-compose exec php php artisan db:seed
-docker-compose exec php php artisan serve --host=0.0.0.0
-```
 
 The api can be accessed at [http://localhost:8000/api](http://localhost:8000/api).
 
-## API Specification
 
-This application adheres to the api specifications set by the [Thinkster](https://github.com/gothinkster) team. This helps mix and match any backend with any other frontend without conflicts.
-
-> [Full API Spec](https://github.com/gothinkster/realworld/tree/master/api)
-
-More information regarding the project can be found here https://github.com/gothinkster/realworld
-
-----------
 
 # Code overview
 
