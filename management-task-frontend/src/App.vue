@@ -1,26 +1,47 @@
 <template>
   <div id="app">
-    <TaskListeVue />
+    <TaskList/>
   </div>
 </template>
 <script>
-import TaskListeVue from './components/TaskListe.vue'
+import TaskList from './components/TaskListe.vue';
 
 export default {
   name: 'App',
   components: {
-    TaskListeVue
-  }
-}
+    TaskList,
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  margin: 2rem 0 4rem 0;
+  padding: 1rem;
+  padding-top: 0;
+  position: relative;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 550px) {
+  #app {
+    padding: 4rem;
+  }
+}
+#app > * {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+#app > form {
+  max-width: 100%;
+}
+#app h1 {
+  display: block;
+  min-width: 100%;
+  width: 100%;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 </style>
